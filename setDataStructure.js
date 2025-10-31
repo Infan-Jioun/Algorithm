@@ -23,9 +23,16 @@
 // console.log(set);
 
 // Example-3
+// const arr = ["laptop", "mobile", "mouse"];
+// const set = new Set(arr);
+// const test = Array.from(set); // Array.from() মূলত কোনো iterable বা array-like object কে সাধারণ array তে রূপান্তর করে।
+// test.push("keyboard")
+// console.log(test)
+
+// example 4 (has)
+// set.has(value) হলো Set-এর একটা method যা যাচাই করে কোনো value Set-এর মধ্যে আছে কিনা।
 const arr = ["laptop", "mobile", "mouse"];
 const set = new Set(arr);
-const test = Array.from(set); // Array.from() মূলত কোনো iterable বা array-like object কে সাধারণ array তে রূপান্তর করে।
-test.push("keyboard")
-console.log(test)
-    ;
+console.log(set.has("laptop"));
+console.log(set.has("keyboard"));
+
