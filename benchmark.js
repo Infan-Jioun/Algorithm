@@ -51,8 +51,10 @@ const scondArrayUser = secondArray.map((number) => ({ userId: number }))
 // // console.log("userid " , firstArrayUser);
 // console.timeEnd("map2");
 
-// Data Searching (Find )
+// Data Searching (Finding)
 console.time("Find");
-const user = firstArrayUser.find((user) => user.userId === 2000)
+ const user = firstArrayUser.find((user) => user.userId === 2000);
+ // etar kaj hosse  sora soari Index Access e chole jai 
+// const user = firstArrayUser[500]
 console.log(user);
 console.timeEnd("Find")
