@@ -6,9 +6,12 @@
 // set.add() হলো Set object - এর একটা built -in method,
 //     যেটা দিয়ে তুমি Set - এর মধ্যে নতুন element যোগ করতে পারো।
 //Array.from() মূলত কোনো iterable বা array-like object কে সাধারণ array তে রূপান্তর করে।
+// set.forEach(callback) is a method of Set that executes a provided function once for each value in the Set in the insertion order.
+
+// set.forEach(callback) হলো Set - এর একটি method যা Set - এর প্রতিটি element - এর জন্য একবার করে একটি function execute করে।
 // Example-1
 // const set = new Set();
-// set.add("infan"); // new elemrent add kore 
+// set.add("infan"); // new elemrent add kore
 // set.add("jioun");
 // set.add("rahman");
 // console.log(set.size);
@@ -31,8 +34,24 @@
 
 // example 4 (has)
 // set.has(value) হলো Set-এর একটা method যা যাচাই করে কোনো value Set-এর মধ্যে আছে কিনা।
-const arr = ["laptop", "mobile", "mouse"];
-const set = new Set(arr);
-console.log(set.has("laptop"));
-console.log(set.has("keyboard"));
+// const arr = ["laptop", "mobile", "mouse"];
+// const set = new Set(arr);
+// console.log(set.has("laptop"));
+// console.log(set.has("keyboard"));
 
+// example 5 (delete)
+// set.delete(value) হলো Set-এর একটি method যা Set-এর মধ্যে থেকে নির্দিষ্ট value মুছে ফেলে, যদি তা থাকে।
+
+// Value মুছে গেলে → true
+
+// Value না থাকলে → false
+// const arr = ["laptop", "mobile", "mouse"];
+// const set = new Set(arr);
+// console.log(set.delete("laptop"));
+// console.log(set);
+// Braute Force
+const arr = ["laptop", "mobile", "mouse"];
+const removeDupArr = (arr) => {
+    const newArr = [];
+
+}
