@@ -41,12 +41,18 @@ for (let i = 0; i < 6000; i++) {
 }
 console.log("FirstArray", firstArray.length);
 console.log("SecondArray", secondArray.length);
-// order of n 
-console.time("map1")
-const firstArrayUser = firstArray.map((number) => ({userId : number}))
-// console.log("userid " , firstArrayUser);
-console.timeEnd("map1");
-console.time("map2")
-const scondArrayUser = secondArray.map((number) => ({userId : number}))
-// console.log("userid " , firstArrayUser);
-console.timeEnd("map2");
+// Data Transformation (Mapping)
+// console.time("map1")
+const firstArrayUser = firstArray.map((number) => ({ userId: number }))
+// // console.log("userid " , firstArrayUser);
+// console.timeEnd("map1");
+// console.time("map2")
+const scondArrayUser = secondArray.map((number) => ({ userId: number }))
+// // console.log("userid " , firstArrayUser);
+// console.timeEnd("map2");
+
+// Data Searching (Find )
+console.time("Find");
+const user = firstArrayUser.find((user) => user.userId === 2000)
+console.log(user);
+console.timeEnd("Find")
