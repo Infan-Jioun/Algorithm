@@ -22,8 +22,31 @@
 //         firstArray.push(i)
 
 //     }
-//     secondArray.push(i)
+//     scondArray.push(i)
 
 // }
 // console.log("FirstArray", firstArray.length)
 // console.log("SecondArray", secondArray.length);
+
+// Method -4 
+
+const firstArray = [];
+const secondArray = [];
+for (let i = 0; i < 6000; i++) {
+    // console.log(i);
+    if (i < 3000) {
+        firstArray.push(i)
+    }
+    secondArray.push(i)
+}
+console.log("FirstArray", firstArray.length);
+console.log("SecondArray", secondArray.length);
+// order of n 
+console.time("map1")
+const firstArrayUser = firstArray.map((number) => ({userId : number}))
+// console.log("userid " , firstArrayUser);
+console.timeEnd("map1");
+console.time("map2")
+const scondArrayUser = secondArray.map((number) => ({userId : number}))
+// console.log("userid " , firstArrayUser);
+console.timeEnd("map2");
