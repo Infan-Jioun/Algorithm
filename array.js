@@ -29,4 +29,8 @@ const filterPosts = [...new Set(tagsFormPosts.flat())]
 ///যদি কোনোটাই না করে → false return করে
 const numbers = [1, 2, 3, 4, 5];
 const hasEventNumber = numbers.some((number) => number % 2 === 0);
-console.log(hasEventNumber);
+// console.log(hasEventNumber);
+const currentUsersRole = ["user", "editor" , "admin"]
+const featuresAccessRoles = ["admin", "manager"]
+const canAccess = currentUsersRole.some((role) => featuresAccessRoles.includes(role))
+console.log(canAccess);
