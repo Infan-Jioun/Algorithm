@@ -22,4 +22,19 @@ console.log(map.has(course1)); // check this element
 map.forEach((value, key) => (key.name = "Title " + key.name))
 map.forEach((value, key) => (value.name = "shohoz " + value.name))
 
+
 console.log(map);
+// Iterator মানে হলো এমন একটা object, যেটা থেকে তুমি একটা একটা করে মান (value) নিতে পারো — যতক্ষণ না সব শেষ হয়।
+// console.log(map.keys()); 
+//  console.log([...map.keys()]);  // object to Array convert
+// console.log(map.values()); 
+
+// 
+for (let key of map.keys()) {
+    key.name = "Title " + key.name
+}
+//Map এর ভিতরের key-value pair গুলো iterable আকারে পাওয়া যাচ্ছে।
+const courses  = [["programing hero ", "Level1" ] , ["Next Level" , "Level2"]]
+const map2 = new Map(courses);
+
+console.log(map2.entries());
