@@ -15,7 +15,23 @@ console.log(person.name);
 // Bracket Notaition
 // Usage: যখন property নাম dynamic, variable এ থাকে, বা স্পেস / special character থাকে।
 const people = {
-   "full name" : "Infan Jioun Rahman",
-   age: 21
+    "full name": "Infan Jioun Rahman",
+    age: 21
 }
 console.log(people["full name"]);
+//  bolean use
+// const course1 = { name: "programing hero" }
+// const course2 = { name: "nextlevel" }
+// const obj = [];
+// obj.nextLevel = { courseId: "Level2" }
+// obj[true] = { courseId: "Level1" }
+// console.log(obj);
+
+const course1 = { name: "programing hero" }
+const course2 = { name: "nextlevel" }
+const obj = [];
+obj.nextLevel = { courseId: "Level2" }
+obj[course1] = { courseId: "Level1" }
+console.log(obj["[object Object]"]);
+
+
