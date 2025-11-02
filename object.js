@@ -8,6 +8,14 @@
 // Usage: যখন property নামটি simple ও নির্দিষ্ট হয়(স্পেস বা special character ছাড়া)।
 const person = {
     name: "Infan",
-    age: 20
+    age: 21
 }
 console.log(person.name);
+
+// Bracket Notaition
+// Usage: যখন property নাম dynamic, variable এ থাকে, বা স্পেস / special character থাকে।
+const people = {
+   "full name" : "Infan Jioun Rahman",
+   age: 21
+}
+console.log(people["full name"]);
