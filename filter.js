@@ -101,7 +101,14 @@ const rawApiData = [
 // TODO Filter = Ellectronics
 // TODO  SortBy = Rating
 // TODO Slice = First  3  (top3 )
-// TODO Map = transform object  shape to (name :name)
+// TODO Map = transform object  shape to (name :name)   
 // Filter Data
-const filterElectronicsData = rawApiData.filter((item) => item.category === "Electronics" )
+const filterElectronicsData = rawApiData
+    .filter((item) => item.category === "Electronics")
+    .sort((a, b) => b.rating - a.rating) // support sestion need
+    .slice(0, 3)
+    //  .map((item) => ({ name: item.productName })) // Method  1
+    .map((item) => {
+        return { name: item.productName } // Method 2
+    })
 console.log(filterElectronicsData);
