@@ -97,3 +97,11 @@ const rawApiData = [
         stock: 60,
     },
 ];
+// Process
+// TODO Filter = Ellectronics
+// TODO  SortBy = Rating
+// TODO Slice = First  3  (top3 )
+// TODO Map = transform object  shape to (name :name)
+// Filter Data
+const filterElectronicsData = rawApiData.filter((item) => item.category === "Electronics" )
+console.log(filterElectronicsData);

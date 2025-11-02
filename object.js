@@ -1,3 +1,4 @@
+
 // What is Notaition 
 //In JavaScript notaition meanns the way we access on define properties inside an object.  There are main notaions used for working with object properties
 // Two Types Notation
@@ -33,5 +34,3 @@ const obj = [];
 obj.nextLevel = { courseId: "Level2" }
 obj[course1] = { courseId: "Level1" }
 console.log(obj["[object Object]"]);
-
-
