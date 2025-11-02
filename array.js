@@ -12,10 +12,21 @@ console.log(flatArray);
 
 
 const tagsFormPosts = [
-    ["javaScript" , "react", "css"],
+    ["javaScript", "react", "css"],
     ["node", "express"],
-    ["css" , "html", "react"]
+    ["css", "html", "react"]
 
 ]
-const filterPosts  =  [...new Set(tagsFormPosts.flat())]
-console.log(filterPosts);
+const filterPosts = [...new Set(tagsFormPosts.flat())]
+// console.log(filterPosts);
+
+// some 
+//some() হলো JavaScript এর একটা array method
+//এটা check করে array-এর কমপক্ষে একটা element কি নির্দিষ্ট condition পূরণ করছে কিনা।
+
+//যদি একটা elementও condition পূরণ করে → true return করে
+
+///যদি কোনোটাই না করে → false return করে
+const numbers = [1, 2, 3, 4, 5];
+const hasEventNumber = numbers.some((number) => number % 2 === 0);
+console.log(hasEventNumber);
