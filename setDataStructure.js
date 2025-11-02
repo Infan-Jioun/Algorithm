@@ -52,8 +52,7 @@
 // Braute Force
 const arr = ["laptop", "mobile", "mouse"];
 const removeDupArr = (arr) => {
-    const newArr = [];
-    // forEach হলো JavaScript array-এর একটি method যা প্রতিটি element-এর জন্য একটি function execute করে।
+    const newArr = [];   // forEach হলো JavaScript array-এর একটি method যা প্রতিটি element-এর জন্য একটি function execute করে।
     arr.forEach((element) => {
         //includes() হলো JavaScript array method যা চেক করে কোনো value array-এ আছে কিনা।
         if (!newArr.includes(element)) {
