@@ -3,12 +3,12 @@
 
 // Array.prototype.flat() হচ্ছে array flattening method।
 // মানে — nested array (array এর ভিতরে array) কে একটা single level array বানায়।
-const arr = [1, 2, 3, [4, 5, [6, 7, [8, 9, [10, 11]]]]]
+// const arr = [1, 2, 3, [4, 5, [6, 7, [8, 9, [10, 11]]]]]
 // console.log(arr)
 //Infinity দিলে — যত গভীর nested array-ই থাকুক না কেন,
 // সব লেভেল খুলে একদম single flat array বানাবে।
-const flatArray = arr.flat(Infinity)
-console.log(flatArray);
+// const flatArray = arr.flat(Infinity)
+// console.log(flatArray);
 
 
 const tagsFormPosts = [
@@ -17,7 +17,7 @@ const tagsFormPosts = [
     ["css", "html", "react"]
 
 ]
-const filterPosts = [...new Set(tagsFormPosts.flat())]
+// const filterPosts = [...new Set(tagsFormPosts.flat())]
 // console.log(filterPosts);
 
 // some 
@@ -27,10 +27,14 @@ const filterPosts = [...new Set(tagsFormPosts.flat())]
 //যদি একটা elementও condition পূরণ করে → true return করে
 
 ///যদি কোনোটাই না করে → false return করে
-const numbers = [1, 2, 3, 4, 5];
-const hasEventNumber = numbers.some((number) => number % 2 === 0);
+// const numbers = [1, 2, 3, 4, 5];
+// const hasEventNumber = numbers.some((number) => number % 2 === 0);
 // console.log(hasEventNumber);
-const currentUsersRole = ["user", "editor" , "admin"]
-const featuresAccessRoles = ["admin", "manager"]
-const canAccess = currentUsersRole.some((role) => featuresAccessRoles.includes(role))
-console.log(canAccess);
+// const currentUsersRole = ["user", "editor", "admin"]
+// const featuresAccessRoles = ["admin", "manager"]
+// const canAccess = currentUsersRole.some((role) => featuresAccessRoles.includes(role))
+// console.log(canAccess);
+
+//Array.from()
+const arr = Array.from([1, 2, 3], (value, i) => value * value)
+console.log(arr);
