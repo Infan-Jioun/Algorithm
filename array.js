@@ -10,3 +10,12 @@ const arr = [1, 2, 3, [4, 5, [6, 7, [8, 9, [10, 11]]]]]
 const flatArray = arr.flat(Infinity)
 console.log(flatArray);
 
+
+const tagsFormPosts = [
+    ["javaScript" , "react", "css"],
+    ["node", "express"],
+    ["css" , "html", "react"]
+
+]
+const filterPosts  =  [...new Set(tagsFormPosts.flat())]
+console.log(filterPosts);
