@@ -4,10 +4,22 @@
 // Map-এ কোনো টাইপের key থাকতে পারে (string, number, object, function ইত্যাদি)।
 
 // এটি insertion order বজায় রাখে।
-const course1 = "programing hero"
-const course2 = "programing hero level 2"
+const course1 = { name: "programing hero" }
+const course2 = { name: "programing hero level 2" }
 const map = new Map();
 map.set(course1, { name: "Level1" }, { deuration: "6m" })
 map.set(course2, { name: "Level2" }, { deuration: "6m" })
-map.set(false, "programing hero infan")
+// map.set(false, "programing hero infan")
+//map.clear();// clear map data
+// map.delete(course2);// deleted data
+
+// console.log(map);
+console.log(map.size);// element length 
+console.log(map.has(course1)); // check this element 
+// forEach() হলো array method, যেটা array-এর প্রতিটা element এর জন্য একটা function চালায়।
+// অর্থাৎ — তুমি একটা callback function দাও, আর এটা array-এর প্রতিটি item-এ সেটি execute করে।
+// map.forEach((value, key) => console.log("Key: ", key, "Value: ", value));
+map.forEach((value, key) => (key.name = "Title " + key.name))
+map.forEach((value, key) => (value.name = "shohoz " + value.name))
+
 console.log(map);
