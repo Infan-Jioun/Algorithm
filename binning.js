@@ -18,8 +18,15 @@ const getBinningTimeStamp = (timestamp) => {
     const floorData = Math.floor(date.getTime() / INTERVAL) * INTERVAL
     return new Date(floorData).toISOString();
 }
-
-
+const binnedata = events.reduce((acc, event) => {
+    const bin = getBinningTimeStamp(event.timestamp)
+    if (!acc[bin]) {
+        acc[bin] = { total: 0 }
+    }
+    acc[bin].total = acc[bin].total + 1
+    return acc;
+}, {})
+console.log(binnedata);
 
 //? Output
 // binnedEvents = {
