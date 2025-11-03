@@ -36,5 +36,11 @@ const tagsFormPosts = [
 // console.log(canAccess);
 
 //Array.from()
-const arr = Array.from([1, 2, 3], (value, i) => value * value)
-console.log(arr);
+// const arr = Array.from([1, 2, 3], (value, i) => value * value)
+// console.log(arr);
+// range 
+const range = (start, stop, step) => Array.from(
+    { length: Math.ceil((stop - start) / step) },
+    (_, i) => start + i * step
+);
+console.log(0, 11, 12);
