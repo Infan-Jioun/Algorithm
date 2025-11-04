@@ -5,4 +5,6 @@ class Node {
     }
 }
 const head = new Node(10);
+head.next = new Node(20);
+head.next.next = new Node(30)
 console.log(head.next);
