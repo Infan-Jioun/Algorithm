@@ -18,16 +18,47 @@
 // }
 // console.log(counter(3));
 // console.log(counter(2));
-
+// stateless or funtion 
+// const createCounter = () => {
+//     let count = 0;
+//     return (amount) => {
+//         count = count + amount
+//         return count;
+//     };
+// };
+// const counter = createCounter();
+// console.log(counter(2));
+// console.log(counter(5));
 // Statefull
-const counter = {
-    count: 0,
+// const counter = {
+//     count: 0,
+//     add(amount) {
+//         this.count = this.count + amount;
+//     },
+//     print() {
+//         console.log(this.count);
+//     }
+// }
+// counter.add(2);
+// counter.add(3);
+
+class Counter {
+    constructor(count) {
+        this.count = count;
+    }
     add(amount) {
-        this.count = this.count + amount;
-    },
+     this.count = this.count + amount
+    }
     print() {
         console.log(this.count);
     }
 }
-counter.add(2);
-counter.add(3);
+const count1 = new Counter(0);
+count1.add(2);
+count1.add(3);
+count1.print();
+const counter2 = new Counter(10);   
+counter2.add(20);
+counter2.add(30)
+
+counter2.print()
