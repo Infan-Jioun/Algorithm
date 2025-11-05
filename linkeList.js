@@ -64,7 +64,32 @@ class LinkeList {
 
 
     }
-    remove() { }
+    remove(index) {
+        if (index === 0) {
+            const removeItem = this.head.value;
+            this.head = this.head.next;
+            if (this.length === 1) {
+                this.tail = null;
+            }
+            this.length--
+            return removeItem;
+        }
+        const leadingNote = this._traverseToIndex(index - 1);
+        const nodeToRemove = leadingNote.next;
+        leadingNote.next = nodeToRemove.next;
+        if (leadingNote.next === null) {
+            this.tail = leadingNote;
+        }
+        // console.log(leadingNote); 
+        return nodeToRemove.value;let count = 0;
+        let currentNode = this.head;
+        while (count != index) {
+            currentNode = currentNode.next;
+            count++
+        }
+    }
+    
+    
     // private helper funtion
     _traverseToIndex(index) {
         let count = 0;
@@ -97,5 +122,6 @@ linkedlist.append(0).append(1).append(2).append(3)
 // linkedlist.prepend(20)
 // linkedlist.prepend(30)
 // linkedlist.insert(2, 200)
+linkedlist.remove(2)
 
 linkedlist.print()
