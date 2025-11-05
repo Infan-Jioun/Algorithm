@@ -14,7 +14,7 @@ class LinkeList {
     append(value) {
         const newNode = new Node(value);
         // if the linkedlist empty
-        if (this.head) {
+        if (this.head === null) {
             this.head = newNode;
             this.tail = newNode
         } else {
@@ -23,8 +23,38 @@ class LinkeList {
         }
         this.length++
     }
-    prepend() { }
-    indsert() { }
+    prepend(value) {
+        const newNode = new Node(value);
+        // if the linked list is empty
+        if (this.head === null) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            // if the linked list is not empty
+            newNode.next = this.head;
+            this.head = newNode
+        }
+        this.length++
+    }
+    insert() { }
     remove() { }
-    print() { }
+    print() {
+
+        const arr = [];
+        let currentNode = this.head;
+        while (currentNode != null) {
+            arr.push(currentNode.value);
+            currentNode = currentNode.next
+        }
+        console.log(arr.join("--> "), "--> null");
+    }
 }
+const linkedlist = new LinkeList();
+linkedlist.append(1)
+linkedlist.append(2)
+linkedlist.append(3)
+
+linkedlist.prepend(10)
+linkedlist.prepend(20)
+linkedlist.prepend(30)
+linkedlist.print()
