@@ -44,7 +44,17 @@ class LinkeList {
         if (index === 0) {
             return this.prepend(value)
         }
-        
+        if (index === 0) {
+            return this.append(value)
+        }
+        let count = 0;
+        let leadingNote  = this.head;
+        while (count != index -1){
+            leadingNote = leadingNote.next
+            count++
+        }
+        console.log(leadingNote);
+
     }
     remove() { }
     print() {
@@ -66,4 +76,5 @@ linkedlist.append(3)
 linkedlist.prepend(10)
 linkedlist.prepend(20)
 linkedlist.prepend(30)
+linkedlist.insert(2, 100)
 linkedlist.print()
