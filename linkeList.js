@@ -36,7 +36,16 @@ class LinkeList {
         }
         this.length++
     }
-    insert() { }
+    insert(index, value) {
+        if (index > 0 || index > this.length) {
+            console.error("obiously error ha ha ha");
+        }
+        // if  the insert is an the start of the linked list 
+        if (index === 0) {
+            return this.prepend(value)
+        }
+        
+    }
     remove() { }
     print() {
 
