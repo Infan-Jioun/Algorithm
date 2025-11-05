@@ -22,6 +22,7 @@ class LinkeList {
             this.tail = newNode;
         }
         this.length++
+        return this;
     }
     prepend(value) {
         const newNode = new Node(value);
@@ -35,6 +36,7 @@ class LinkeList {
             this.head = newNode
         }
         this.length++
+        return this;
     }
     insert(index, value) {
         if (index > 0 || index > this.length) {
@@ -44,19 +46,35 @@ class LinkeList {
         if (index === 0) {
             return this.prepend(value)
         }
-        if (index === 0) {
+        if (index === this.length) {
             return this.append(value)
         }
-        let count = 0;
-        let leadingNote  = this.head;
-        while (count != index -1){
-            leadingNote = leadingNote.next
-            count++
-        }
-        console.log(leadingNote);
+        // let count = 0;
+        // let leadingNote = this.head;
+        // while (count != index - 1) {
+        //     leadingNote = leadingNote.next
+        //     count++
+        // }
+        const leadingNote = this._traverseToIndex(index - 1)
+        const holdingNode = leadingNote.next;
+        const newNode = new Node(value);
+        leadingNote.next = newNode
+        newNode.next = holdingNode
+        this.length++
+
 
     }
     remove() { }
+    // private helper funtion
+    _traverseToIndex(index) {
+        let count = 0;
+        let currentNode = this.head;
+        while (count != index) {
+            currentNode = currentNode.next;
+            count++
+        }
+        return currentNode;
+    }
     print() {
 
         const arr = [];
@@ -69,12 +87,15 @@ class LinkeList {
     }
 }
 const linkedlist = new LinkeList();
-linkedlist.append(1)
-linkedlist.append(2)
-linkedlist.append(3)
+// Method -1 
+// linkedlist.append(0)
+// linkedlist.append(1)
+// linkedlist.append(2)
+// Method -2
+linkedlist.append(0).append(1).append(2).append(3)
+// linkedlist.prepend(10)
+// linkedlist.prepend(20)
+// linkedlist.prepend(30)
+// linkedlist.insert(2, 200)
 
-linkedlist.prepend(10)
-linkedlist.prepend(20)
-linkedlist.prepend(30)
-linkedlist.insert(2, 100)
 linkedlist.print()
