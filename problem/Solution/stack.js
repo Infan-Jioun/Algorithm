@@ -1,32 +1,38 @@
 export default class Stack {
     constructor() {
-        this.items = []
-    }
-    // o(n)
-    push(value) {
-        this.items.push(value)
+        this.items = [];
     }
 
+    //* O(1)
+    push(value) {
+        this.items.push(value);
+    }
+
+    //* O(1)
     pop() {
         if (this.isEmpty()) {
             return undefined;
         }
-        return this.items.map()
+
+        return this.items.pop();
     }
 
-    // 0(1)
+    //* O(1)
     peek() {
         if (this.isEmpty()) {
-            return undefined
+            return undefined;
         }
-        return this.map[this.items.length - 1]
+
+        return this.items[this.items.length - 1];
     }
-    // o(1)
+
+    //* O(1)
     isEmpty() {
-        return this.items.length === 0
+        return this.items.length === 0;
     }
-    // 0(n)
+
+    //* O(n)
     print() {
-        console.log(this.items.slice().reverse().join("->"));
+        console.log(this.items.slice().reverse().join(" -> "));
     }
 }

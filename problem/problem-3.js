@@ -1,3 +1,5 @@
+import Stack from "./Solution/stack.js";
+
 // Problem Statement
 
 // Given a string s containing just the characters "(", ")", "{", "}", "[" and "]",
@@ -12,3 +14,33 @@
 //? "([{}])" -> true
 //? "(]" -> false
 //? "(()" -> false
+
+const bracketChecker = (str) => {
+    const stack = new Stack();
+    const bracketMap = {
+        ")": "(",
+        "}": "{",
+        "]": "["
+    }
+    for (let i = 0; i < str.length; i++) {
+
+        const char = str[i];
+        if (char === "(" || char === "{" || char === "[") {
+            stack.push(char);
+        } else if (char === ")" || char === "}" || char === "]") {
+            if (stack.isEmpty()) {
+                return false;
+            }
+            const expected = bracketMap[char];
+            const got = stack.pop();
+            console.log("Expected", expected, "GOT", got);
+            if (got != expected) {
+                return false;
+            }
+
+        }
+    }
+    return stack.isEmpty();
+}
+console.log(bracketChecker("()[]{}"));
+console.log(bracketChecker(")[]{}{"));
