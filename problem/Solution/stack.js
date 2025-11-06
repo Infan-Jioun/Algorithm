@@ -8,10 +8,25 @@ export default class Stack {
     }
 
     pop() {
-        if (this.isEmpty) {
+        if (this.isEmpty()) {
             return undefined;
         }
         return this.items.map()
     }
-     
- }
+
+    // 0(1)
+    peek() {
+        if (this.isEmpty()) {
+            return undefined
+        }
+        return this.map[this.items.length - 1]
+    }
+    // o(1)
+    isEmpty() {
+        return this.items.length === 0
+    }
+    // 0(n)
+    print() {
+        console.log(this.items.slice().reverse().join("->"));
+    }
+}
