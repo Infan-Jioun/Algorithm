@@ -27,9 +27,7 @@ const twoSum = (arr , target) => {
         numbMap.set(currentNumber, i)
         console.log(numbMap);
     }
-
     return undefined
 }
-
 console.log(twoSum([2, 11, 7, 15], 9));
 
